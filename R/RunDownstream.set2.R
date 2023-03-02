@@ -5,9 +5,9 @@ source("Tools/EdgeR_pb_new.R")
 source("Tools/Enrich_FGSEA.R")
 
 print("Load data")
-#seur=readRDS("seur.set2.micro.only.RDS")
 seur=readRDS("seur.set2.micro.only.mat.RDS")
 system("mkdir output_set2")
+
 print("Test for differences in cell type composition")
 system("mkdir output_set2/CellComposition")
 mrk1=runPropel(seur,~0+Condition,"ConditionD-ConditionC","orig.ident","CellType")

@@ -1,6 +1,12 @@
 library(DropletUtils)
 
-
+## loadDrops 
+##
+## Load CellRanger output and downsamples.
+##
+## @param lst List of outputs from CellRanger (the out directories)
+## @param numCells the Number of cells for each entry in lst
+## @return A sparse matrix of gene by cell UMI counts
 loadDrops<-function(lst,numCells)
 {
 print("Get QC")
